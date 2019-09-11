@@ -49,7 +49,7 @@ public class PersonController {
     public ResponseEntity deletePerson(@PathVariable(value = "id") Long personId) throws Exception {
         Person person = personRequestHandler.getPerson(personId);
         Boolean result = personRequestHandler.delete(person);
-        if(result){
+        if (result) {
             return ResponseEntity.ok("Delete Success");
         } else {
             return ResponseEntity.status(501).body("Technical Error");

@@ -130,4 +130,39 @@ public class PersonManagementApplicationTests {
         assertEquals(null, result.getDob());
         assertEquals(null, result.getCurrentAddress());
     }
+
+    @Test
+    public void testByAddingDuplcateRecordWithSameFirstNameAndLastName() {
+        Person person1 = new Person();
+        person1.setFirstName("Chandra");
+        person1.setLastName("Dhulipudi");
+        person1.setAge(35);
+        Long currentTime = System.currentTimeMillis();
+        person1.setDob(new java.util.Date(currentTime));
+        person1.setCurrentAddress("2045PK");
+
+        ResponseEntity<Person> postResponse = restTemplate.postForEntity(getUrl() + "/api/persons", person1, Person.class);
+        Person result = postResponse.getBody();
+
+        assertEquals(person1.getFirstName(), result.getFirstName());
+        assertEquals(person1.getLastName(), result.getLastName());
+        assertEquals(person1.getDob(), result.getDob());
+        assertEquals(person1.getAge(), result.getAge());
+        assertEquals(person1.getCurrentAddress(), result.getCurrentAddress());
+
+        Person person2 = new Person();
+        person2.setFirstName("Chandra");
+        person2.setLastName("Dhulipudi");
+        person2.setAge(35);
+        person2.setDob(new java.util.Date(currentTime));
+        person2.setCurrentAddress("2045PK");
+
+        ResponseEntity<Person> Response = restTemplate.postForEntity(getUrl() + "/api/persons", person2, Person.class);
+        Person result2 = Response.getBody();
+
+        assertEquals(null, result2.getFirstName());
+        assertEquals(null, result2.getLastName());
+        assertEquals(null, result2.getDob());
+        assertEquals(null, result2.getCurrentAddress());
+    }
 }

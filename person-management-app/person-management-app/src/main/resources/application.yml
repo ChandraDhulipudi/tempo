@@ -12,7 +12,7 @@ logging:
 # Application properties
 person-management-app:
     security:
-        enabled: false
-        default-username: user
-        default-password: pass
-        request-type: put
+enabled: false
+                          default-username: user
+                          default-password: pass
+                          request-type: put

@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "persons")
+@Table(name = "persons", uniqueConstraints = {@UniqueConstraint(columnNames = {"first_name", "last_name"})})
 @EntityListeners(AuditingEntityListener.class)
 public class Person {
 
