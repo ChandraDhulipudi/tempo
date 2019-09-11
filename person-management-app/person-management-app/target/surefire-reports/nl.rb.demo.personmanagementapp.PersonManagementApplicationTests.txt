@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: nl.rb.demo.personmanagementapp.PersonManagementApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 56.634 s - in nl.rb.demo.personmanagementapp.PersonManagementApplicationTests
