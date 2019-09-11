@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "name": "person-management-app",
+      "type": "nl.rb.demo.personmanagementapp.properties.AppProperties",
+      "sourceType": "nl.rb.demo.personmanagementapp.properties.AppProperties"
+    },
+    {
+      "name": "person-management-app.security",
+      "type": "nl.rb.demo.personmanagementapp.properties.AppProperties$Security",
+      "sourceType": "nl.rb.demo.personmanagementapp.properties.AppProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person-management-app.security.default-password",
+      "type": "java.lang.String",
+      "sourceType": "nl.rb.demo.personmanagementapp.properties.AppProperties$Security"
+    },
+    {
+      "name": "person-management-app.security.default-username",
+      "type": "java.lang.String",
+      "sourceType": "nl.rb.demo.personmanagementapp.properties.AppProperties$Security"
+    },
+    {
+      "name": "person-management-app.security.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "nl.rb.demo.personmanagementapp.properties.AppProperties$Security",
+      "defaultValue": false
+    },
+    {
+      "name": "person-management-app.security.request-type",
+      "type": "java.lang.String",
+      "sourceType": "nl.rb.demo.personmanagementapp.properties.AppProperties$Security"
+    }
+  ],
+  "hints": []
+}

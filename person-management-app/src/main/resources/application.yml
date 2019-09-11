@@ -1,0 +1,18 @@
+# Server properties
+server:
+    port: 8006
+    servlet:
+        context-path: /person-management-app
+
+# Logging properties
+logging:
+    level:
+        nl.rb.demo.personmanagementapp: debug
+
+# Application properties
+person-management-app:
+    security:
+        enabled: false
+        default-username: user
+        default-password: pass
+        request-type: put
